@@ -11,6 +11,13 @@ namespace Homework1
     {
         private T[] _myList = new T[4];
         private int _count = 0;
+        public int Count
+        {
+            get
+            {
+                return _count;
+            }
+        }
 
         public T this[int i]
         {
@@ -42,6 +49,7 @@ namespace Homework1
             }
             _myList[_count] = item;
             _count++;
+            CutArray();
         }
 
         public void AddRange( T[] _newList)
@@ -50,6 +58,7 @@ namespace Homework1
             {
                 Add(item);
             }
+            CutArray();
         }
         public void AddRange(IEnumerable<T> _newList)
         {
@@ -57,6 +66,7 @@ namespace Homework1
             {
                 Add(item);
             }
+            CutArray();
         }
 
         public int IndexOf(T item)
