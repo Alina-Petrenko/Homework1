@@ -12,13 +12,20 @@ namespace Homework1
             myList.Add(5);
             myList.Add(3);
             myList.Add(7);
-            myList.Remove(3);
+            myList.AddRange(new [] { 1, 4, 5, 3 });
             foreach (var item in myList)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(myList[0]);
-            Console.WriteLine(myList[1]);
+            Console.WriteLine("");
+            myList.RemoveAt(3);
+            myList.Sort();
+            foreach (var item in myList)
+            {
+                Console.WriteLine(item);
+            }
+            //Console.WriteLine(myList[0]);
+            //Console.WriteLine(myList[1]);
         }
     }
 }
